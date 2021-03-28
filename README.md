@@ -87,7 +87,23 @@ The farmbot WebApp will not accept mqtt connections for a device that has not be
 #### Deleting a device from farmboWeb App
 You will require to delete an existing device in a farmbot account for all the requests to be seen in their order.
 
-#### Installing the proxy
-The proxy is a cors-anywhere proxy modified to redirect requests receiced at `/path` to `http:/my.farmbot.io/path` and log both the request and the response.
+***This step is really not necessary. But just incase it is needed, goto [delete](http://your-simulator/#/delete)***
 
-See [how to install the proxy]().
+#### Installing the proxy
+The proxy is a cors-anywhere proxy modified to redirect requests received at `/path` to `http:/my.farmbot.io/path` and log both the request and the response.
+
+See [how to install the proxy](https://github.com/AngelFarmer/cors-escape).
+
+#### Checking the requests
+
+```bash
+cd farmbot_os/farmbot_os/
+FARMBOT_EMAIL="farmbotEmail" FARMBOT_PASSWORD="farmbotPassword" FARMBOT_SERVER="http://localhost:2000" iex -S mix
+```
+
+## WebSocket
+
+Is this the connection to the webapp?
+The above not helpful.Try connecting to websocket
+
+Push communication with broker to the future...
