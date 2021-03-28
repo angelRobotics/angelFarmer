@@ -16,5 +16,66 @@ Why this project?
 7. Testing
 8. Website
 
-### Farmbot Simulator
+## Farmbot Simulator
 
+### Installing FarmbotOs in Ubuntu Server
+
+Begin by installing the requirements(erlang and elixir) as `asdf plugins` by following these [instructions](https://hexdocs.pm/nerves/installation.html#Linux). The steps in the page (March 2021) are given below 
+
+```bash
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+
+# The following steps are for bash. If you’re using something else, do the
+# equivalent for your shell.
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc # optional
+source ~/.bashrc
+# for zsh based systems run the following
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
+source ~/.zshrc
+
+asdf plugin-add erlang
+asdf plugin-add elixir
+
+# Note #1:
+# If on Debian or Ubuntu, you'll want to install wx before running the next line:
+# sudo apt install libwxgtk3.0-dev
+# for arch based systems run the next line:
+# yay -S wxgtk2 fop jdk-openjdk unzip
+
+
+# Note #2:
+# It's possible to use different Erlang and Elixir versions with Nerves. The
+# latest official Nerves systems are compatible with the versions below. In
+# general, differences in patch releases are harmless. Nerves detects
+# configurations that might not work at compile time.
+asdf install erlang 23.1.4
+asdf install elixir 1.11.2-otp-23
+asdf global erlang 23.1.4
+asdf global elixir 1.11.2-otp-23
+```
+
+Clone the farmbotOs repo:
+```bash
+git clone https://github.com/FarmBot/farmbot_os.git --recursive
+```
+
+If it fails to clone the inner repos, then you may need to add your ssh key to the command. Replace `/tmp/gitkey` with the path to your github ssh key.
+```bash
+GIT_SSH_COMMAND='ssh -i /tmp/gitkey -o IdentitiesOnly=yes' git clone https://github.com/FarmBot/farmbot_os.git --recursive
+```
+
+Install the dependencies
+```bash
+cd farmbot_os
+mix deps.get
+cd farmbot_os
+mix archive.install hex nerves_bootstrap
+mix deps.get
+```
+
+Test if all things are fine:
+```bash
+FARMBOT_EMAIL="farmbotEmail" FARMBOT_PASSWORD="farmbotPassword" FARMBOT_SERVER="https://my.farm.bot" iex -S mix
+```
