@@ -79,3 +79,15 @@ Test if all things are fine:
 ```bash
 FARMBOT_EMAIL="farmbotEmail" FARMBOT_PASSWORD="farmbotPassword" FARMBOT_SERVER="https://my.farm.bot" iex -S mix
 ```
+
+### Cloning FarmbotOS operations
+
+The farmbot WebApp will not accept mqtt connections for a device that has not been created. This process will assist in seeing the request to farmbot webApp from the OS that help with creating the device.
+
+#### Deleting a device from farmboWeb App
+You will require to delete an existing device in a farmbot account for all the requests to be seen in their order.
+
+#### Installing the proxy
+The proxy is a cors-anywhere proxy modified to redirect requests receiced at `/path` to `http:/my.farmbot.io/path` and log both the request and the response.
+
+See [how to install the proxy]().
