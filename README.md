@@ -37,6 +37,8 @@ Ubuntu Versions < 20.4
 sudo apt install libwxgtk3.0-dev
 ```
 
+In case you are installing on small server like 1GB memory, compiling erlang may fail. If this happens, [increasing swap memory will help](https://linuxhandbook.com/increase-swap-ubuntu/) But it will still take a very long time to compile.
+
 Begin by installing the requirements(erlang and elixir) as `asdf plugins` by following these [instructions](https://hexdocs.pm/nerves/installation.html#Linux). The steps in the page (March 2021) are given below 
 
 
