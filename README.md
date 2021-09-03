@@ -20,7 +20,26 @@ Why this project?
 
 ### Installing FarmbotOs in Ubuntu Server
 
+
+### Erlang Dependencies
+
+```bash
+sudo apt-get install automake autoconf libreadline-dev libncurses-dev libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev  libgl1-mesa-dev  libglu1-mesa-dev libssh-dev xsltproc fop libxml2-utils
+```
+
+For Ubuntu 20.4
+```
+sudo apt install libwxgtk3.0-gtk3-dev
+```
+
+Lower Version of Ubuntu
+```
+sudo apt install libwxgtk3.0-dev
+```
+
 Begin by installing the requirements(erlang and elixir) as `asdf plugins` by following these [instructions](https://hexdocs.pm/nerves/installation.html#Linux). The steps in the page (March 2021) are given below 
+
+
 
 ```bash
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
