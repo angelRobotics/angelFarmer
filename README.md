@@ -32,7 +32,7 @@ For Ubuntu 20.4
 sudo apt install libwxgtk3.0-gtk3-dev
 ```
 
-Lower Version of Ubuntu
+Ubuntu Versions < 20.4
 ```
 sudo apt install libwxgtk3.0-dev
 ```
