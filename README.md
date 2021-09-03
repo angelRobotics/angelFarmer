@@ -77,10 +77,10 @@ asdf global erlang 23.1.4
 asdf global elixir 1.11.2-otp-23
 ```
 
-~~Clone the farmbotOs repo: 
-```bash  git clone https://github.com/FarmBot/farmbot_os.git --recursive  ```~~
+Clone the farmbotOs repo: 
+~~```bash  git clone https://github.com/FarmBot/farmbot_os.git --recursive  ```~~
 
-If it fails to clone the inner repos, then you may need to add your ssh key to the command. Replace `/tmp/gitkey` with the path to your github ssh key.
+~~If it fails to clone the inner repos, then you may need to add your ssh key to the command.~~ Replace `/tmp/gitkey` with the path to your github ssh key.
 ```bash
 GIT_SSH_COMMAND='ssh -i /tmp/gitkey -o IdentitiesOnly=yes' git clone https://github.com/FarmBot/farmbot_os.git --recursive
 ```
@@ -106,10 +106,10 @@ The farmbot WebApp will not accept mqtt connections for a device that has not be
 
 >> Sections below removed from new version of farmbot simulator
 
-#### Deleting a device from farmboWeb App
+~~#### Deleting a device from farmboWeb App
 You will require to delete an existing device in a farmbot account for all the requests to be seen in their order.
 
-***This step is really not necessary. But just incase it is needed, goto [delete](http://your-simulator/#/delete)***
+~~***This step is really not necessary. But just incase it is needed, goto [delete](http://your-simulator/#/delete)***~~
 
 #### Installing the proxy
 The proxy is a cors-anywhere proxy modified to redirect requests received at `/path` to `http:/my.farmbot.io/path` and log both the request and the response.
