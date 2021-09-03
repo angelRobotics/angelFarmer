@@ -78,9 +78,7 @@ asdf global elixir 1.11.2-otp-23
 ```
 
 ~~Clone the farmbotOs repo: 
-```bash 
-git clone https://github.com/FarmBot/farmbot_os.git --recursive 
-```~~
+```bash  git clone https://github.com/FarmBot/farmbot_os.git --recursive  ```~~
 
 If it fails to clone the inner repos, then you may need to add your ssh key to the command. Replace `/tmp/gitkey` with the path to your github ssh key.
 ```bash
