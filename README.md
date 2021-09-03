@@ -88,6 +88,8 @@ GIT_SSH_COMMAND='ssh -i /tmp/gitkey -o IdentitiesOnly=yes' git clone https://git
 Install the dependencies
 ```bash
 cd farmbot_os
+## we don't know what they did with the newer version which demands to have FARMDUINO connected before it can work
+git checkout 0532b64c15b99a20a255219c6188cc021072161c
 mix deps.get
 cd farmbot_os
 mix archive.install hex nerves_bootstrap
