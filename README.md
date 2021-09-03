@@ -105,6 +105,9 @@ FARMBOT_EMAIL="farmbotEmail" FARMBOT_PASSWORD="farmbotPassword" FARMBOT_SERVER="
 
 The farmbot WebApp will not accept mqtt connections for a device that has not been created. This process will assist in seeing the request to farmbot webApp from the OS that help with creating the device.
 
+
+>> Sections below removed from new version of farmbot simulator
+
 #### Deleting a device from farmboWeb App
 You will require to delete an existing device in a farmbot account for all the requests to be seen in their order.
 
